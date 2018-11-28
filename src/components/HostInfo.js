@@ -7,7 +7,7 @@ class HostInfo extends Component {
   state = {
     active: this.props.host.active,
     options: this.props.areas.map(area => {
-      return {key: area.name, text: area.name, value: area.name}
+      return {key: area.name, text: area.formattedName, value: area.name}
     }),
     value: this.props.host.area
     // options: [{key: "some_area" text: "Some Area" value: "some_area"}, {key: "another_area" text: "Another Area" value: "another_area"}],
@@ -22,7 +22,8 @@ class HostInfo extends Component {
 
 
   handleChange = (e, {value}) => {
-    debugger
+    this.props.setAreaOfHost(value, this.props.host.id)
+    this.setState({value: value })
     // the 'value' attribute is given via Semantic's Dropdown component.
     // Put a debugger in here and see what the "value" variable is when you pass in different options.
     // See the Semantic docs for more info: https://react.semantic-ui.com/modules/dropdown/#usage-controlled

@@ -2,13 +2,13 @@ import React from 'react';
 import '../stylesheets/Host.css'
 import { Card } from 'semantic-ui-react'
 
-const Host = (props) => {
+const Host = ({img_url, selected, id, selectHost}) => {
 
   return(
     <Card
-      className={"host " + (props.selected ? "selected" : null)}
-      onClick={() => props.selectHost(props.id)}
-      image={props.img_url}
+      className={"host " + (selected ? "selected" : null)}
+      onClick={() => selectHost(id)}
+      image={img_url}
       raised
     />
   )

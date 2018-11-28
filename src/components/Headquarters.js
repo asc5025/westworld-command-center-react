@@ -17,7 +17,7 @@ class Headquarters extends Component  {
           <ColdStorage hosts={this.props.hosts} selectHost={this.props.selectHost}/>
         </Grid.Column>
         <Grid.Column width={5}>
-          <Details host={this.selectedHost()} areas={this.props.areas} toggleHostActiveStatus={this.props.toggleHostActiveStatus}/>
+          <Details host={this.selectedHost()} areas={this.props.areas} setAreaOfHost={this.props.setAreaOfHost} toggleHostActiveStatus={this.props.toggleHostActiveStatus}/>
         </Grid.Column>
         <Grid.Column width={3}>
           {"logpanel"}
