@@ -6,7 +6,7 @@ import HostInfo from './HostInfo.js'
 
 const Details = (props) => {
 
-  const renderSomething = (host) => host ? <HostInfo key={props.host.area} host={props.host} areas={props.areas} setAreaOfHost={props.setAreaOfHost} toggleHostActiveStatus={props.toggleHostActiveStatus}/> : <Image size='medium' src={Images.westworldLogo}/>
+  const renderSomething = (host) => host ? <HostInfo key={props.host.id} host={props.host} areas={props.areas} setAreaOfHost={props.setAreaOfHost} toggleHostActiveStatus={props.toggleHostActiveStatus}/> : <Image size='medium' src={Images.westworldLogo}/>
 
   return(
     <Segment id="details" className="HQComps">
